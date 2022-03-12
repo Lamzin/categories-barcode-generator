@@ -1,0 +1,1 @@
+docker run -v "$(pwd)"/out:/out --rm -it $(docker build -q .)
