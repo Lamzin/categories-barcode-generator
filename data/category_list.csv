@@ -1,13 +1,11 @@
-,,,,
-,,,,
 1-00,Ліки / Medizin,,Druckerei,Ruslan
 1-01,Хірургія,Chirurgie,200,50
 1-02,Реанімація ,Reanimation,200,50
-1-03,Сильні Знеболюючі,Starke Schmerzmittel,200,50
+1-03,Сильні знеболюючі,Starke Schmerzmittel,200,50
 1-04,Шприци,Spritzen + Nadeln,200,50
-1-05,Системи для Інфузій,Infusionssysteme,200,50
-1-06,Дезінфекция ран,Wunddesinfektion,200,50
-1-07,Дезінфекция рук і поверхонь,Hände- und Flächedesinfektion,200,50
+1-05,Системи для інфузій,Infusionssysteme,200,50
+1-06,Дезінфекція ран,Wunddesinfektion,200,50
+1-07,Дезінфекція рук і поверхонь,Hände- und Flächedesinfektion,200,50
 1-08,Протипростудні,Erkältungsmittel,200,50
 1-09,Антибіотики,Antibiotika,200,50
 1-10,Ібупрофен ,Ibuprofen,200,50
@@ -26,9 +24,9 @@
 1-23,Аспірин,Aspirin,200,50
 1-24,Ліки для дітей,Medikamente für Kinder,200,50
 1-25,Ліки для шлунку,Magen und Darm,200,50
-1-26,Ліки для Жінок,Medikamente für Frauen,200,50
-1-27,Ліки для Чоловіків,Medikamente für Männer,200,50
-1-28,Очі + Вуха,Augen + Ohren,200,50
+1-26,Ліки для жінок,Medikamente für Frauen,200,50
+1-27,Ліки для чоловіків,Medikamente für Männer,200,50
+1-28,Очі + вуха,Augen + Ohren,200,50
 1-29,Медичні прилади,Medizinische Geräte,200,50
 1-30,Знеболюючі гелі,Schmerzsalbe,200,50
 1-31,Дерматологія,Dermatologie,200,50
@@ -42,11 +40,11 @@
 2-03,Дитяче харчування 0-6 місяців,Babynahrung 0-6 Monate,500,200
 2-04,Дитяче харчування 6-12 місяців,Babynahrung 6-12 Monate,500,200
 2-05,Макарони / крупи,Nudeln / Grieß ,500,200
-2-06,Шоколад / солодке,Schokolade / Süßigkeiten,500,200
+2-06,Шоколад / солодке / кава / чай,Schokolade / Süßigkeiten / Kaffee / Tee,500,200
 2-07,Супи сухі,Instentsuppen,200,200
-2-08,Кава / чай,Kaffee / Tee,200,200
+2-08,НЕ ВИКОРИСТОВУЄТЬСЯ Кава / чай,DONT USE Kaffee / Tee,200,200
 2-09,Їжа для тварин,Tierfutter,100,200
-2-10,Їжа для передової (набір),Lebensmittelset,0,
+2-10,Їжа для передової (набір),Lebensmittelset,,
 3-00,Гігієна для дорослих / Hygiene Erwachsene,,,
 3-01,Жіноча гігієна,Frauenhygiene,500,200
 3-02,Зубна гігієна для дорослих ,Zahnhygiene,500,200

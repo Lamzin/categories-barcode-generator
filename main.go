@@ -4,6 +4,7 @@ import (
 	"encoding/csv"
 	"fmt"
 	"image"
+	"image/png"
 	"os"
 	"strings"
 	"unicode/utf8"
@@ -11,6 +12,7 @@ import (
 	"github.com/boombuler/barcode"
 	"github.com/boombuler/barcode/code128"
 	"github.com/fogleman/gg"
+	gim "github.com/ozankasikci/go-image-merge"
 	pdfcpu "github.com/pdfcpu/pdfcpu/pkg/api"
 	"github.com/pkg/errors"
 )
@@ -75,9 +77,30 @@ func main() {
 		fmt.Printf("Generating %d/%d separate PDF files\n", i, len(files))
 
 		name := strings.ReplaceAll(files[i], ".png", ".pdf")
+		name = strings.ReplaceAll(name, "out/", "out/1 лейбл на сторінці -- 1 label on page/")
+
 		// Remove old file.
 		os.Remove(name)
 		if err := pdfcpu.ImportImagesFile([]string{files[i], files[i]}, name, nil, nil); err != nil {
+			panic(err)
+		}
+	}
+
+	for i := 0; i < len(files); i++ {
+		fmt.Printf("Generating %d/%d separate PDF files with 2 images on page\n", i, len(files))
+
+		pngFile, err := Stack2Images(files[i])
+		if err != nil {
+			panic(err)
+		}
+		defer os.Remove(pngFile)
+
+		name := strings.ReplaceAll(pngFile, ".png", ".pdf")
+		name = strings.ReplaceAll(name, "out/", "out/2 лейбли на сторінці -- 2 labels on page/")
+
+		// Remove old file.
+		os.Remove(name)
+		if err := pdfcpu.ImportImagesFile([]string{pngFile}, name, nil, nil); err != nil {
 			panic(err)
 		}
 	}
@@ -158,4 +181,26 @@ func fileName(barcodeText, uaText, deText string) string {
 	name := fmt.Sprintf("%s--%s--%s.png", barcodeText, uaText, deText)
 	name = strings.ReplaceAll(name, "/", "")
 	return fmt.Sprintf("out/%s", name)
+}
+
+func Stack2Images(filePath string) (string, error) {
+	grids := []*gim.Grid{
+		{ImageFilePath: filePath},
+		{ImageFilePath: filePath},
+	}
+	rgba, err := gim.New(grids, 1, 2).Merge()
+	if err != nil {
+		return "", errors.Wrap(err, "failed to merge 2 images")
+	}
+
+	stackFilePath := strings.ReplaceAll(filePath, ".png", ".2images.png")
+	os.Remove(stackFilePath)
+
+	// save the output to jpg or png
+	file, err := os.Create(stackFilePath)
+	if err := png.Encode(file, rgba); err != nil {
+		return "", errors.Wrap(err, "failed to save image")
+	}
+
+	return stackFilePath, nil
 }
