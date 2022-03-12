@@ -121,7 +121,7 @@ func ReadCSV() ([][]string, error) {
 
 func DrawPNG(barcodeText, uaText, deText string) string {
 	const W = 1600
-	const H = 1000
+	const H = 1200
 	// const P = 100
 	dc := gg.NewContext(W, H)
 	dc.SetRGB(1, 1, 1)
@@ -138,7 +138,7 @@ func DrawPNG(barcodeText, uaText, deText string) string {
 	if err := dc.LoadFontFace("data/Arial Unicode.ttf", uaTextP); err != nil {
 		panic(err)
 	}
-	dc.DrawStringWrapped(uaText, W/2, margin, 0.5, 0, W-100, 1.5, gg.AlignCenter)
+	dc.DrawStringWrapped(uaText, W/2, margin+100, 0.5, 0, W-100, 1.5, gg.AlignCenter)
 
 	deTextP := 90.0
 	if utf8.RuneCountInString(deText) < 15 {
@@ -147,15 +147,15 @@ func DrawPNG(barcodeText, uaText, deText string) string {
 	if err := dc.LoadFontFace("data/Arial Unicode.ttf", float64(deTextP)); err != nil {
 		panic(err)
 	}
-	dc.DrawStringWrapped(deText, W/2, 350, 0.5, 0, W-100, 1.5, gg.AlignCenter)
+	dc.DrawStringWrapped(deText, W/2, 350+100, 0.5, 0, W-100, 1.5, gg.AlignCenter)
 
-	dc.DrawImage(GenerageBarCode(barcodeText), 300, 550)
+	dc.DrawImage(GenerageBarCode(barcodeText), 300, 550+100)
 
 	const barcodeTextP = 100
 	if err := dc.LoadFontFace("data/Arial Unicode.ttf", barcodeTextP); err != nil {
 		panic(err)
 	}
-	dc.DrawStringWrapped(barcodeText, W/2, 870, 0.5, 0, W-100, 1.5, gg.AlignCenter)
+	dc.DrawStringWrapped(barcodeText, W/2, 870+100, 0.5, 0, W-100, 1.5, gg.AlignCenter)
 
 	fileName := fileName(barcodeText, uaText, deText)
 	if err := dc.SavePNG(fileName); err != nil {
