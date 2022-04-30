@@ -81,3 +81,43 @@
 5-04,Подушки,Kissen
 5-05,Рушники,Handtücher
 5-06,Постільна білизна,Bettwäsche
+6-00,Одяг / Kleidung,
+6-01,чоловічі куртки,Herren Jacken
+6-02,чоловічі штани /джинси,Herren Hosen / Jeans
+6-03,чоловічі кофти/светери,Herren Pullover
+6-04,чоловічі футболки / сорочки,Herren T-Schirts / Hemden
+6-05,чоловічі шкарпетки,Herren Socken
+6-06,чоловічі шарфи / шапки / рукавиці,Herren Mützen / Schals / Handschuhe
+6-07,чоловіче взуття до 42,Herren Schuhe bis 42
+6-08,чоловіче взуття від 43,Herren Schuhe ab 43
+6-09,чоловіча термобілизна,Herren Theromounterwäsche
+6-10,чоловіча білизна,Herren Unterwäsche
+6-11,чоловчий (мiкс),Herren Mix
+6-12,жіночі куртки,Damen Jacken
+6-13,жіночі штани /джинси,Damen Hosen / Jeans
+6-14,жіночі кофти/светери,Damen Pullover
+6-15,жіночі футболки / блузки,Damen T-Schirts / Hemden
+6-16,жіночі шкарпетки,Damen Socken
+6-17,жіночі шарфи / шапки / рукавиці,Damen Mützen / Schals / Handschuhe
+6-18,жіноче взуття до 42,Damen Schuhe bis 42
+6-19,жіноче взуття від 43,Damen Schuhe ab 43
+6-20,жіноча термобілизна,Damen Theromounterwäsche
+6-21,жіноча білизна,Damen Unterwäsche
+6-22,жіночий (мiкс),Damen Mix
+6-23,діти 50 - 68,Kinder 50 - 68
+6-24,діти 74 - 86,Kinder 74 - 86
+6-25,діти 92 - 104,Kinder 92 - 104
+6-26,діти 110 - 116,Kinder 110 - 116
+6-27,діти 122 - 128,Kinder 122 - 128
+6-28,діти 134 - 164,Kinder 134 - 164
+6-29,діти (мiкс),Kinder Mix
+7-00,Різне / Verschiedenes,
+7-01,маленькі іграшки авто,kleine Spielzeugautos
+7-02,великі іграшки авто,große Spielzeugautos
+7-03,мьякі іграшки ,Kuscheltiere
+7-04,ігри,Brettspeile
+7-05,книги,Bücher
+7-06,дівчачі іграшки,Mädchenspielzeuge
+7-07,іграшки для хлопців,Jungenspielzeuge
+7-08,речі для малювання ,Malsachen
+7-09,речі для немовлят,Babyspielsachen
